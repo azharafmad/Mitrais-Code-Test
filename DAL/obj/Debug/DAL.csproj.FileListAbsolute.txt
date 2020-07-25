@@ -1,0 +1,6 @@
+C:\Users\Azhar Afif Al Ahmad\source\repos\Apk1\DAL\bin\Debug\DAL.dll
+C:\Users\Azhar Afif Al Ahmad\source\repos\Apk1\DAL\bin\Debug\DAL.pdb
+C:\Users\Azhar Afif Al Ahmad\source\repos\Apk1\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Azhar Afif Al Ahmad\source\repos\Apk1\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Azhar Afif Al Ahmad\source\repos\Apk1\DAL\obj\Debug\DAL.dll
+C:\Users\Azhar Afif Al Ahmad\source\repos\Apk1\DAL\obj\Debug\DAL.pdb

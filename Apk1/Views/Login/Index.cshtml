@@ -1,0 +1,176 @@
+﻿
+@{
+    Layout = null;
+}
+@Scripts.Render("~/bundles/jquery")
+@Styles.Render("~/Content/css")
+<script src="~/Scripts/Pages/LoginJS.js"></script>
+
+<style>
+    .fullwidth {
+        min-width: 100%;
+    }
+
+    .rbBig {
+        border: 0px;
+        width: 100%;
+        height: 2em;
+    }
+
+    .btnPurple {
+        background-color: #a13ac9;
+        border-color: #a13ac9;
+        height: 50px;
+        border-radius: 8px;
+    }
+
+    white {
+        color: white;
+    }
+
+    #overlay {
+        /*display: none;*/
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        top: 0px;
+        left: 0px;
+        padding: 0px;
+        opacity: .5;
+    }
+</style>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form id="Form1" name="Form1">
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-4" id="divContent">
+            <div id="divAtas">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Registration</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="number" name="txtMobileNUmber" id="txtMobileNUmber" class="form-control fullwidth" placeholder="Mobile Number" required />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="txtFirstName" id="txtFirstName" class="form-control fullwidth" placeholder="First Name" required />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="txtLastName" id="txtLastName" class="form-control fullwidth" placeholder="Last Name" required />
+                    </div>
+                </div>
+                <br />
+                <div class="row" hidden>
+                    <div class="col-md-12">
+                        <input type="text" name="txtDate" id="txtDate" class="form-control fullwidth" placeholder="Date" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label>Date of Birth</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <select name="ddlMonth" id="ddlMonth" class="form-control" onchange="getDate()">
+                            <option value="">Month</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select name="ddlDate" id="ddlDate" class="form-control" onchange="getDate()">
+                            <option value="">Date</option>
+                            @{
+                                for (int i = 1; i < 10; i++)
+                                {
+                                    var a = "0" + i;
+                                    <option value=@a>@a</option>
+                                }
+                                for (int i = 10; i < 32; i++)
+                                {
+                                    <option value=@i>@i</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select name="ddlYear" id="ddlYear" class="form-control" onchange="getDate()">
+                            <option value="">Year</option>
+                            @{
+                                for (int i = 1900; i < 2051; i++)
+                                {
+                                    <option value=@i>@i</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="radio" id="rbMale" class="" name="rbGender" value="Male">
+                        <label for="male">Male</label> &nbsp;
+                        <input type="radio" id="rbFemale" class="" name="rbGender" value="Female">
+                        <label for="female">Female</label><br>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="txtEmail" id="txtEmail" class="form-control fullwidth" placeholder="Email" required />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" id="btnRegister" name="btnRegister" onclick="Register()" class="fullwidth btnPurple"><white>Register</white></button>
+                    </div>
+                </div>
+                <div id="overlay" hidden="hidden"> </div>
+            </div>
+            <br />
+            <div id="divBawah">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" id="btnLogin" name="btnLogin" onclick="toLoginPage()" hidden="hidden" class="fullwidth btnPurple"><white>Login</white></button>
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+    </form>
+</body>
+</html>
+
+<script>
+    var API = '@Url.Content("~/")'
+</script>

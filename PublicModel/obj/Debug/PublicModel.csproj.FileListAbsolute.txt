@@ -1,0 +1,6 @@
+C:\Users\Azhar Afif Al Ahmad\source\repos\Apk1\PublicModel\bin\Debug\PublicModel.dll
+C:\Users\Azhar Afif Al Ahmad\source\repos\Apk1\PublicModel\bin\Debug\PublicModel.pdb
+C:\Users\Azhar Afif Al Ahmad\source\repos\Apk1\PublicModel\obj\Debug\PublicModel.csprojAssemblyReference.cache
+C:\Users\Azhar Afif Al Ahmad\source\repos\Apk1\PublicModel\obj\Debug\PublicModel.csproj.CoreCompileInputs.cache
+C:\Users\Azhar Afif Al Ahmad\source\repos\Apk1\PublicModel\obj\Debug\PublicModel.dll
+C:\Users\Azhar Afif Al Ahmad\source\repos\Apk1\PublicModel\obj\Debug\PublicModel.pdb

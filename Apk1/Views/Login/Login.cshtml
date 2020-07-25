@@ -1,0 +1,75 @@
+﻿
+@{
+    Layout = null;
+}
+@Scripts.Render("~/bundles/jquery")
+@Styles.Render("~/Content/css")
+<script src="~/Scripts/Pages/LoginJS.js"></script>
+
+<style>
+    .fullwidth {
+        min-width: 100%;
+    }
+
+    .rbBig {
+        border: 0px;
+        width: 100%;
+        height: 2em;
+    }
+
+    .btnPurple {
+        background-color: #a13ac9;
+        border-color: #a13ac9;
+        height: 50px;
+        border-radius: 8px;
+    }
+
+    white {
+        color: white;
+    }
+
+    
+</style>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form id="Form1" name="Form1">
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-4" id="divContent">
+            <div id="divAtas">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Login</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="number" name="txtMobileNUmber" id="txtMobileNUmber" class="form-control fullwidth" placeholder="Mobile Number" required />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="txtEmail" id="txtEmail" class="form-control fullwidth" placeholder="Email" required />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" id="btnLogin" name="btnLogin" onclick="" class="fullwidth btnPurple"><white>Login</white></button>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </form>
+</body>
+</html>
